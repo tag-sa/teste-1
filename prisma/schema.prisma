@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x","debian-openssl-1.1.x"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model products {
+  id           Int      @id @default(autoincrement())
+  name         String
+  status       String
+  created      DateTime
+  created_by   Int
+  categories_id Int     
+  categories   categories @relation(fields: [categories_id], references: [id])
+  users        users      @relation(fields: [created_by], references: [id])
+   image        String?
+}
+
+model categories {
+  id       Int      @id @default(autoincrement())
+  name     String
+  products products[]
+}
+
+model users {
+  id       Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  deleted   Boolean  @default(false)
+  products products[]
+}
