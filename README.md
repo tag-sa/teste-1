@@ -13,7 +13,7 @@ O projeto utiliza containers (DOCKER):
 
 ## Passos para executar a aplicação web:
 
-### 1. Rodar a API
+### 1. Rodar a API ** "Pré-requisito: O Docker deve estar instalado e em execução no sistema." **
 
 Dentro da pasta `srv-api`, abra o terminal e execute os seguintes comandos:
 
