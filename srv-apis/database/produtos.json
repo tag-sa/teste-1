@@ -1,0 +1,17 @@
+[
+  {
+    "codigo": 1,
+    "nome": "PROTUDO",
+    "descricao": "Descrição Produto",
+    "preco": 27.56,
+    "peso": 160,
+    "foto": "cafe1.jpg",
+    "desconto": 0,
+    "pontosDasAvaliacoes": 4,
+    "totalDeAvaliacoes": 350,
+    "disponibilidade": 5,
+    "totalDeCompras": 0,
+    "ehVegetariano": false,
+    "categoria": 1
+  }
+]
