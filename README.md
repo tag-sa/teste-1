@@ -15,6 +15,8 @@ O projeto utiliza containers (DOCKER):
 
 ### 1. Rodar a API ** "Pré-requisito: O Docker deve estar instalado e em execução no sistema." **
 
+0. git clone https://github.com/Robsonnsbr/teste-robson.git
+
 Dentro da pasta `srv-api`, abra o terminal e execute os seguintes comandos:
 
 1. `docker-compose build`
