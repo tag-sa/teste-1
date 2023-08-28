@@ -1,0 +1,27 @@
+<div class="tituloListas">
+  <h1>Lista de status</h1>
+  <button class="btnProdutosLista" routerLink="/cadastros/status/incluir" color="primary">Incluir</button>
+</div>
+<table mat-table [dataSource]="status">
+
+  <ng-container matColumnDef="codigo">
+    <th mat-header-cell *matHeaderCellDef> Código </th>
+    <td mat-cell *matCellDef="let status"> {{status.codigo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="nome">
+    <th mat-header-cell *matHeaderCellDef> Nome </th>
+    <td mat-cell *matCellDef="let status"> {{status.nome}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="acoes">
+    <th mat-header-cell *matHeaderCellDef style="text-align: center; padding-right: 35px"> Ações </th>
+    <td class="ultima-coluna" mat-cell *matCellDef="let status">
+      <a routerLink="/cadastros/status/editar/{{ status.codigo }}">Editar</a>
+      <a routerLink="/cadastros/status/excluir/{{ status.codigo }}">Excluir</a>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

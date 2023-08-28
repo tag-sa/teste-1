@@ -1,0 +1,16 @@
+<div class="tituloListas">
+  <h1>Editar status</h1>
+</div>
+<form>
+  <mat-card>
+    <mat-card-content>
+      <mat-form-field>
+        <input matInput placeholder="Nome" name="nome" [(ngModel)]="status.nome">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="atualizarStatus()" color="primary">Salvar</button>
+      <button mat-raised-button routerLink="/cadastros/status">Cancelar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

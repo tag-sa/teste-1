@@ -1,0 +1,32 @@
+<div class="tituloListas">
+  <h1>Lista de usuarios</h1>
+  <button class="btnProdutosLista" routerLink="/cadastros/usuarios/incluir" color="primary">Incluir</button>
+</div>
+<table mat-table [dataSource]="usuarios">
+
+  <ng-container matColumnDef="codigo">
+    <th mat-header-cell *matHeaderCellDef> Código </th>
+    <td mat-cell *matCellDef="let usuario"> {{usuario.codigo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="nome">
+    <th mat-header-cell *matHeaderCellDef> Nome </th>
+    <td mat-cell *matCellDef="let usuario"> {{usuario.nome}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> E-mail </th>
+    <td mat-cell *matCellDef="let usuario"> {{usuario.email}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="acoes">
+    <th mat-header-cell *matHeaderCellDef style="text-align: center; padding-right: 35px"> Ações </th>
+    <td class="ultima-coluna" mat-cell *matCellDef="let usuario">
+      <a routerLink="/cadastros/usuarios/editar/{{ usuario.codigo }}">Editar</a>
+      <a routerLink="/cadastros/usuarios/excluir/{{ usuario.codigo }}">Excluir</a>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

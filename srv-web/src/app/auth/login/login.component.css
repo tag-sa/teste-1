@@ -1,0 +1,17 @@
+mat-card {
+  max-width: 400px;
+  margin: 2em auto;
+  text-align: center;
+}
+
+mat-form-field {
+  display: block;
+}
+
+#btn-logar {
+  margin: 10px;
+}
+
+#btn-registrar {
+  margin: 10px;
+}

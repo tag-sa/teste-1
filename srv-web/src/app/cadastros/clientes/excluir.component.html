@@ -1,0 +1,62 @@
+<div class="tituloListas">
+  <h1>Excluir cliente</h1>
+</div>
+<form>
+  <mat-card>
+    <mat-card-content>
+      <mat-form-field>
+        <input matInput disabled placeholder="Nome" name="nome" [(ngModel)]="cliente.nome">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput disabled placeholder="Sobrenome" name="sobrenome" [(ngModel)]="cliente.sobrenome">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput disabled placeholder="CPF" name="cpf" [(ngModel)]="cliente.cpf">
+      </mat-form-field>
+      <mat-form-field class="campo-pequeno">
+        <mat-label>Usuário</mat-label>
+        <mat-select disabled matNativeControl id="usuario" required name="usuario" [(value)]="cliente.usuario.codigo">
+          <mat-option *ngFor="let usuario of usuarios" [value]="usuario.codigo">
+            {{usuario.email}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="campo-pequeno">
+        <mat-label>Loja</mat-label>
+        <mat-select disabled matNativeControl id="loja" required name="loja" [(value)]="cliente.loja.codigo">
+          <mat-option *ngFor="let loja of lojas" [value]="loja.codigo">
+            {{loja.nome}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput disabled placeholder="Saldo" name="saldocarteira" [(ngModel)]="cliente.saldoCarteira">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput disabled placeholder="Receita" name="receita" [(ngModel)]="cliente.receita">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput disabled placeholder="Empresa" name="empresa" [(ngModel)]="cliente.empresa">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput disabled placeholder="Fone" name="fone" [(ngModel)]="cliente.fone">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput disabled placeholder="Endereço" name="endereco" [(ngModel)]="cliente.endereco">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput disabled placeholder="CEP" name="cep" [(ngModel)]="cliente.cep">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput disabled placeholder="Cidade" name="cidade" [(ngModel)]="cliente.cidade">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput disabled placeholder="Estado" name="estado" [(ngModel)]="cliente.estado">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="excluirCliente()" color="warn">Confirmar</button>
+      <button mat-raised-button routerLink="/cadastros/clientes">Cancelar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

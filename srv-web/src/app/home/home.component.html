@@ -1,0 +1,20 @@
+<section class="home-produto">
+
+  <img class="home-produto-imagem" src="{{URL_SERVIDOR_UPLOAD_FOTO + produto.foto }}" alt="produto do dia">
+
+  <span class="home-produto-conteudo">
+    <h2 class="home-produto-secao">Produto em oferta!</h2>
+    <h1 class="home-produto-titulo">{{ produto.nome}} </h1>
+    <mat-icon class="star-checked">star</mat-icon>
+    <mat-icon class="star-checked">star</mat-icon>
+    <mat-icon class="star-checked">star</mat-icon>
+    <mat-icon class="star">star</mat-icon>
+    <mat-icon class="star">star</mat-icon>
+    <h2 class="home-produto-preco">{{ produto.preco | formatoReal:'BRL'}}</h2>
+    <app-seletor-home [produto]="produto" (eventoAtualizar)="atualizarItem($event)">
+    </app-seletor-home>
+    <h2 class="home-produto-titulo-descricao">Descrição do produto</h2>
+    <p class="home-produto-texto">{{ produto.descricao }}</p>
+  </span>
+
+</section>

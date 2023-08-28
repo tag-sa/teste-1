@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="loginForm" (ngSubmit)="logar()">
+      <h2>Autenticar no sistema</h2>
+      <p><strong>Usuários e senha para teste:</strong></p>
+      <p>Apenas o usuário <strong>Bruno</strong>(adm) pode modificar itens</p>
+      <p>E-mail: bruno@gmail.com, michael@gmail.com</p>
+      <p>Senha: Senha123</p>
+      <mat-error *ngIf="isInvalido">
+        O usuário e a senha são inválidos!
+      </mat-error>
+      <mat-form-field class="full-width-input">
+        <input matInput type="email" placeholder="E-mail" formControlName="email" value="bruno@gmail.com" required>
+        <mat-error>
+          Por favor forneça um e-mail válido!
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <input matInput type="password" placeholder="Senha" formControlName="senha" value="Senha123" required>
+        <mat-error>
+          Por favor forneça uma senha válida!
+        </mat-error>
+      </mat-form-field>
+      <a id="btn-registrar" routerLink="/registrar">Registrar</a>
+      <button id="btn-logar" mat-raised-button color="primary">Logar</button>
+    </form>
+  </mat-card-content>
+</mat-card>

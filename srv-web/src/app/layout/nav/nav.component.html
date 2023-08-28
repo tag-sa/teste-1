@@ -1,0 +1,17 @@
+<a routerLink="/" mat-button><mat-icon>home</mat-icon>Home</a>
+<a routerLink="/produtos" mat-button><mat-icon>redeem</mat-icon>Produtos</a>
+<a *ngIf="itensQtde === 0" routerLink="/carrinho" mat-button>
+  <mat-icon>shopping_cart</mat-icon>Carrinho</a>
+<a *ngIf="itensQtde > 0" routerLink="/carrinho" mat-button>
+  <mat-icon>shopping_cart</mat-icon>Carrinho
+  <span style="color:yellow; font-weight: 500;">{{'(' + itensQtde + ')'}}</span>
+</a>
+<a routerLink="/meuspedidos" *ngIf="!authService.isAdmin() && authService.isAutenticado()"
+  mat-button><mat-icon>auto_awesome_motion</mat-icon>Meus pedidos</a>
+<a routerLink="/cadastros" *ngIf="authService.isAdmin()"
+  mat-button><mat-icon>auto_awesome_motion</mat-icon>Cadastros</a>
+<a routerLink="/login" *ngIf="!authService.isAutenticado()" mat-button class="login"><mat-icon>login</mat-icon></a>
+<a routerLink="/conta" *ngIf="authService.isAutenticado()" mat-button
+  class="conta"><mat-icon>account_circle</mat-icon>{{ authService.usuarioLogado.nome }}</a>
+<a (click)="logout()" *ngIf="authService.isAutenticado()" mat-button><mat-icon>logout</mat-icon></a>
+<a routerLink="/sobre" mat-button><mat-icon>info</mat-icon>Sobre</a>

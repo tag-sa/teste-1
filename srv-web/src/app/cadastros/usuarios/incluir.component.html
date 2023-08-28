@@ -1,0 +1,22 @@
+<div class="tituloListas">
+  <h1>Novo usuario</h1>
+</div>
+<form>
+  <mat-card>
+    <mat-card-content>
+      <mat-form-field>
+        <input matInput placeholder="Nome" name="nome" [(ngModel)]="usuario.nome">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="E-mail" name="email" type="email" [(ngModel)]="usuario.email">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Senha" name="senha" type="current-password" [(ngModel)]="usuario.senha">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button class="btnMyFood" (click)="salvarUsuario()" color="primary">Salvar</button>
+      <button mat-raised-button class="btnMyFood" routerLink="/cadastros/usuarios">Cancelar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

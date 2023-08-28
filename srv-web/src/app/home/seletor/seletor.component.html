@@ -1,0 +1,9 @@
+<span class="seletor">
+  <button class="seletor-item" mat-flat-button color="primary" 
+     (click)="removerItem()"><mat-icon>remove</mat-icon></button>
+  <input disabled class="seletor-item" type="text" [value]="produto.quantidade">
+  <button class="seletor-item" mat-flat-button color="primary" 
+     (click)="adicionarItem()"><mat-icon>add</mat-icon></button>
+   <button class="seletor-item" mat-flat-button color="primary" 
+     (click)="adicionarAoCarrinho()">Adicionar</button>
+</span>

@@ -1,0 +1,10 @@
+version: 2.2
+
+services:
+  font-web:
+  image: font-web
+  build: .
+  environment:
+    NODE_ENV: .env.production
+  ports:
+    - 8080:8080
