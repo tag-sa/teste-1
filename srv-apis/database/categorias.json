@@ -1,42 +1,42 @@
 [
   {
     "codigo": 1,
-    "nome": "Cafés",
-    "descricao": "Descrição da categoria de cafés"
+    "nome": "men's clothing",
+    "descricao": "clothing"
   },
   {
     "codigo": 2,
-    "nome": "Aperitivos",
-    "descricao": "Descrição da categoria de aperitivos"
+    "nome": "jewelery",
+    "descricao": "jewelery"
   },
   {
     "codigo": 3,
-    "nome": "Saladas",
-    "descricao": "Descrição da categoria de saladas"
+    "nome": "electronics",
+    "descricao": "Descrição electronics"
   },
   {
     "codigo": 4,
-    "nome": "Sopas",
-    "descricao": "Descrição da categoria de sopas"
+    "nome": "Descrição",
+    "descricao": "Descrição"
   },
   {
     "codigo": 5,
-    "nome": "Carnes",
-    "descricao": "Descrição da categoria de carnes"
+    "nome": "Descrição",
+    "descricao": "Descrição"
   },
   {
     "codigo": 6,
-    "nome": "Frango",
-    "descricao": "Descrição da categoria de frango"
+    "nome": "Descrição",
+    "descricao": "Descrição"
   },
   {
     "codigo": 7,
-    "nome": "Sobremesas",
-    "descricao": "Descrição da categoria de sobremesas"
+    "nome": "Descrição",
+    "descricao": "Descriçãos"
   },
   {
     "codigo": 8,
-    "nome": "Bebidas",
-    "descricao": "Descrição da categoria de bebidas"
+    "nome": "Descrição",
+    "descricao": "Descrição"
   }
 ]
