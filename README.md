@@ -1,59 +1,38 @@
-# Teste para candidatos à vaga de Desenvolvedor Fullstack Junior
+# Teste de ROBSON MONTEIRO para candidato à vaga de Desenvolvedor Fullstack Junior
 
-Olá caro desenvolvedor, neste teste analisaremos seu conhecimento em desenvolvimento de software para ocupar o cargo de seu interesse, à seguir explicaremos tudo o que será necessário.
+Olá avaliador,
 
-## Instruções
+Neste teste, apliquei todos os meus conhecimentos e utilizei o ChatGPT juntamente com modelos de projetos anteriores para tentar atender a todas as exigências da avaliação. Certamente, não consegui alcançar a perfeição, mas dediquei-me ao máximo para entregar o melhor dentro dos meus conhecimentos.
 
-O desafio consiste em implementar uma API e um ambiente web utilizando Angular e/ou React para a interface e Node.js ou PHP com um framework (CakePHP, ou outro de sua preferência) para a API, e gerir/implementar um banco de dados relacional SQLite, MySQL ou Postgres (a seu critério), a partir de uma modelagem de dados inicial sugerida.
+O projeto utiliza containers (DOCKER):
 
-Você vai criar uma aplicação de cadastro de produtos para um e-commerce, com as seguintes funcionalidades:
-- A tabela de categorias e usuários do banco de dados deve ser populada por quaisquer itens, não é necessário criar um crud para ela;
-- É necessário que no cadastro e edição do produto tenha possibilidade de ler e enviar uma imagem para upload;
-- CRUD de produtos.
-    - a listagem dos produtos deve ser filtrável e ordenável por qualquer campo, e possuir paginação de 20 itens por página.
-    - deve possuir formulários para criação e atualização de seus itens.
-    - deve permitir a deleção de qualquer item de sua lista.
+- O projeto possui uma arquitetura no padrão MVC.
+- O frontend é baseado no framework Angular com TypeScript.
+- O backend é baseado em Node.js com JavaScript.
+- O banco de dados utilizado é o não-relacional MongoDB.
 
-## Modelo de dados
+## Passos para executar a aplicação web:
 
-O modelo de dados sugerido inicialmente é o seguinte:
+### 1. Rodar a API
 
-<div align="center">
-  <img src="bd.jpg" width="500" />
-</div>
+Dentro da pasta `srv-api`, abra o terminal e execute os seguintes comandos:
 
-Se você achar necessário poderá criar ou alterar o modelo de dados, mas minimamente estes campos e dados deverão estar presentes.
-Além disso, a implementação deste modelo em um banco de dados relacional deve ser realizada levando em consideração os seguintes requisitos:
-- Para criação do modelo de dados o banco de dados deve ser criado utilizando migrations e seeds para popular as informações;
-- Implementação das validações necessárias na camada que julgar melhor;
+1. `docker-compose build`
+2. Aguarde a construção terminar!
+3. `docker-compose up`
+4. Aguarde a API iniciar!
 
-## Tecnologias a serem utilizadas
+A API estará rodando. Para confirmar, acesse o endpoint: [http://localhost:3000/](http://localhost:3000/)
 
-Devem ser utilizadas as seguintes tecnologias:
-- HTML
-- CSS
-- Javascript
-- Framework CakePHP (PHP) ou Node.js
-- Angular ou React;
+### 2. Rodar o APP
 
-## Entrega
-- Para iniciar o teste, faça um fork deste repositório; Se você apenas clonar o repositório não vai conseguir fazer push.
-- Crie uma branch com o seu nome completo;
-- Altere o arquivo README.md(este) com as informações necessárias para executar o seu teste
-- Envie-nos o pull request (tenha certeza que seu repositório nos dará acesso!);
+Dentro da pasta `srv-web`, abra o terminal e execute os seguintes comandos:
 
-## Bônus (Não obrigatórios)
-- Implementar autenticação de usuário na aplicação.
-- Permitir que o usuário mude o número de itens por página na listagem de produtos.
-- Permitir deleção em massa de produtos.
-- Implementar a camada de front-end utilizando bootstrap e que seja responsiva.
-- Criação do ambiente com Docker.
-- E o que mais sua mente permitir!
+1. `docker build -t app .`
+2. Aguarde a construção terminar!
+3. `docker run -it --rm -p 8080:8080 app`
+4. Aguarde o APP iniciar!
 
-## O que iremos analisar
-- Organização do código;
-- Aplicação de design patterns;
-- Separação de módulos e componentes;
-- Legibilidade;
+O APP estará rodando. Para confirmar, acesse o endpoint: [http://localhost:8080/](http://localhost:8080/)
 
-# Boa sorte!
+## Aproveite!
