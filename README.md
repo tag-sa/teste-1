@@ -22,7 +22,10 @@ Dentro da pasta `srv-api`, abra o terminal e execute os seguintes comandos:
 1. `docker-compose build`
 2. Aguarde a construção terminar!
 3. `docker-compose up`
-4. Aguarde a API iniciar!
+4. OBS: A Api é reponsável pela construção e migração automatica de tabelas do banco(MongoDB).
+6. OBS: Se tudo todos os passos estivem corretos o banco vai estar em pleno funcionamento juntamente com a API.
+5. Aguarde a API iniciar!
+
 
 A API estará rodando. Para confirmar, acesse o endpoint: [http://localhost:3000/](http://localhost:3000/)
 
