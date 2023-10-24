@@ -17,7 +17,7 @@ O projeto utiliza containers (DOCKER):
 
 0. git clone https://github.com/Robsonnsbr/teste-robson.git
 
-Dentro da pasta `srv-api`, abra o terminal e execute os seguintes comandos:
+Dentro da pasta `srv-api`, abra o terminal(prompt) e execute os seguintes comandos:
 
 1. `docker-compose build`
 2. Aguarde a construção terminar!
@@ -31,7 +31,7 @@ A API estará rodando. Para confirmar, acesse o endpoint: [http://localhost:3000
 
 ### 2. Rodar o APP
 
-Dentro da pasta `srv-web`, abra o terminal e execute os seguintes comandos:
+Dentro da pasta `srv-web`, abra o terminal(prompt) e execute os seguintes comandos:
 
 1. `docker build -t app .`
 2. Aguarde a construção terminar!
