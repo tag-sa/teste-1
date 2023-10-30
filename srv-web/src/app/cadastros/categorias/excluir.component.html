@@ -1,0 +1,19 @@
+<div class="tituloListas">
+  <h1>Excluir categoria</h1>
+</div>
+<form>
+  <mat-card>
+    <mat-card-content>
+      <mat-form-field>
+        <input matInput disabled placeholder="Nome" name="nome" [(ngModel)]="categoria.nome">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput disabled placeholder="Descrição" name="descricao" [(ngModel)]="categoria.descricao">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="excluirCategoria()" color="warn">Confirmar</button>
+      <button mat-raised-button routerLink="/cadastros/categorias">Cancelar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

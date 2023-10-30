@@ -1,0 +1,14 @@
+.header-toolbar{
+  height: 60px;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.logo {
+  width: 150px;
+}

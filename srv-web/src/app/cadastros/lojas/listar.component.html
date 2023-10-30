@@ -1,0 +1,27 @@
+<div class="tituloListas">
+  <h1>Lista de lojas</h1>
+  <button class="btnProdutosLista" routerLink="/cadastros/lojas/incluir" color="primary">Incluir</button>
+</div>
+<table mat-table [dataSource]="lojas">
+
+  <ng-container matColumnDef="codigo">
+    <th mat-header-cell *matHeaderCellDef> Código </th>
+    <td mat-cell *matCellDef="let loja"> {{loja.codigo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="nome">
+    <th mat-header-cell *matHeaderCellDef> Nome </th>
+    <td mat-cell *matCellDef="let loja"> {{loja.nome}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="acoes">
+    <th mat-header-cell *matHeaderCellDef style="text-align: center; padding-right: 35px"> Ações </th>
+    <td class="ultima-coluna" mat-cell *matCellDef="let loja">
+      <a routerLink="/cadastros/lojas/editar/{{ loja.codigo }}">Editar</a>
+      <a routerLink="/cadastros/lojas/excluir/{{ loja.codigo }}">Excluir</a>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

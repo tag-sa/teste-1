@@ -1,0 +1,57 @@
+.home-produto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-produto-imagem {
+  flex: 0 0 350px;
+  max-height: 350px;
+}
+
+.home-produto-conteudo {
+  margin-left: 30px;
+}
+
+.home-produto-secao {
+  color: #f7941e;
+  box-sizing: content-box;
+  margin-bottom: 5px;
+  display: inline-block;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.home-produto-titulo {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.home-produto-preco {
+  font-size: 1.5em;
+  color: #eb0c0c;
+}
+
+.home-produto-texto {
+  font-size: 1.5em;
+  max-width: 450px;
+}
+
+
+.home-produto-titulo-descricao {
+  margin-top: 20px;
+}
+
+.star {
+  color: #c7c7c7;
+}
+
+.star-checked {
+  color: #ffdb0f;
+}
+
+@media (max-width: 600px) {
+  .home-produto {
+    flex-wrap: wrap;
+  }
+}

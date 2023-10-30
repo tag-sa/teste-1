@@ -1,0 +1,42 @@
+<div class="tituloListas">
+  <h1>Lista de clientes</h1>
+  <button class="btnProdutosLista" routerLink="/cadastros/clientes/incluir" color="primary">Incluir</button>
+</div>
+<table mat-table [dataSource]="clientes">
+
+  <ng-container matColumnDef="codigo">
+    <th mat-header-cell *matHeaderCellDef> Código </th>
+    <td mat-cell *matCellDef="let cliente"> {{cliente.codigo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="nome">
+    <th mat-header-cell *matHeaderCellDef> Nome </th>
+    <td mat-cell *matCellDef="let cliente"> {{cliente.nome}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="sobrenome">
+    <th mat-header-cell *matHeaderCellDef> Sobrenome </th>
+    <td mat-cell *matCellDef="let cliente"> {{cliente.sobrenome}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="cpf">
+    <th mat-header-cell *matHeaderCellDef> CPF </th>
+    <td mat-cell *matCellDef="let cliente"> {{cliente.cpf}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="receita">
+    <th mat-header-cell *matHeaderCellDef> Receita </th>
+    <td mat-cell *matCellDef="let cliente"> {{cliente.receita}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="acoes">
+    <th mat-header-cell *matHeaderCellDef style="text-align: center; padding-right: 35px"> Ações </th>
+    <td class="ultima-coluna" mat-cell *matCellDef="let cliente">
+      <a routerLink="/cadastros/clientes/editar/{{ cliente.codigo }}">Editar</a>
+      <a routerLink="/cadastros/clientes/excluir/{{ cliente.codigo }}">Excluir</a>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

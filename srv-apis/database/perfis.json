@@ -1,0 +1,35 @@
+[
+  {
+    "codigo": 1,
+    "nome": "Administrador",
+    "papel": "admin",
+    "desc" : "Possui o nível máximo de autorização",
+    "permissoes": "incluir, listar, alterar e excluir",
+    "modulos": "*"
+  },
+  {
+    "codigo": 2,
+    "nome": "Usuário",
+    "papel": "usuario",
+    "desc" : "Possui o nível mínimo de autorização",
+    "permissoes": "incluir, listar",
+    "modulos": "*"
+  },
+  {
+    "codigo": 3,
+    "nome": "Gerente",
+    "papel": "gerente",
+    "desc" : "Possui o nível intermediário de autorização",
+    "permissoes": "incluir, listar e alterar",
+    "modulos": "*"
+  }
+  ,
+  {
+    "codigo": 4,
+    "nome": "Anônimo",
+    "papel": "anonimo",
+    "desc" : "Não possui autorização",
+    "permissoes": "listar",
+    "modulos": "*"
+  }
+]

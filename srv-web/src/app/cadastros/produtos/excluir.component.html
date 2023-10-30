@@ -1,0 +1,50 @@
+<div class="tituloListas">
+  <h1>Excluir produto</h1>
+</div>
+<form>
+  <mat-card>
+    <mat-card-content>
+      <mat-form-field>
+        <input matInput type="text" disabled placeholder="Nome" name="nome" [(ngModel)]="produto.nome">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" disabled placeholder="Descrição" name="descricao" [(ngModel)]="produto.descricao">
+      </mat-form-field>
+      <div>
+        <label for="imgFoto">Foto</label>
+        <img id="imgFoto" disabled style="cursor: pointer" (click)="fileUpload.click()"
+          src="{{URL_SERVIDOR_UPLOAD_FOTO + produto.foto}}">
+        <input type="file" disabled style="display: none;" id="fileUpload" #fileUpload class="file-upload">
+        <button id="btnSelecionar" disabled (click)="fileUpload.click()" mat-raised-button
+          color="primary">Selecionar</button>
+      </div>
+      <mat-form-field class="campo-pequeno">
+        <mat-label>Categoria</mat-label>
+        <mat-select matNativeControl disabled id="categoria" required name="categoria"
+          [(value)]="produto.categoria.codigo">
+          <mat-option *ngFor="let categoria of categorias" [value]="categoria.codigo">
+            {{categoria.nome}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="campo-pequeno">
+        <input matInput type="number" step="0.01" disabled placeholder="Preço" name="preco" [(ngModel)]="produto.preco">
+      </mat-form-field>
+      <mat-form-field class="campo-pequeno">
+        <input matInput type="number" disabled placeholder="Peso" name="peso" [(ngModel)]="produto.peso">
+      </mat-form-field>
+      <mat-form-field class="campo-pequeno">
+        <input matInput type="number" step="0.01" disabled placeholder="Desconto" name="desconto"
+          [(ngModel)]="produto.desconto">
+      </mat-form-field>
+      <mat-form-field class="campo-pequeno">
+        <input matInput type="number" disabled placeholder="Disponibilidade" name="disponibilidade"
+          [(ngModel)]="produto.disponibilidade">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="excluir(produto)" color="warn">Excluir</button>
+      <button mat-raised-button routerLink="/cadastros">Cancelar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

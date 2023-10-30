@@ -1,0 +1,42 @@
+[
+  {
+    "codigo": 1,
+    "nome": "men's clothing",
+    "descricao": "clothing"
+  },
+  {
+    "codigo": 2,
+    "nome": "jewelery",
+    "descricao": "jewelery"
+  },
+  {
+    "codigo": 3,
+    "nome": "electronics",
+    "descricao": "Descrição electronics"
+  },
+  {
+    "codigo": 4,
+    "nome": "Descrição",
+    "descricao": "Descrição"
+  },
+  {
+    "codigo": 5,
+    "nome": "Descrição",
+    "descricao": "Descrição"
+  },
+  {
+    "codigo": 6,
+    "nome": "Descrição",
+    "descricao": "Descrição"
+  },
+  {
+    "codigo": 7,
+    "nome": "Descrição",
+    "descricao": "Descriçãos"
+  },
+  {
+    "codigo": 8,
+    "nome": "Descrição",
+    "descricao": "Descrição"
+  }
+]

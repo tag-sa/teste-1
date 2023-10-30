@@ -1,0 +1,13 @@
+.seletor {
+  display: flex;
+  align-items: stretch;
+}
+
+.seletor input {
+  width: 70px;
+  text-align: center;
+}
+
+.seletor-item {
+  margin-left: 3px;
+}

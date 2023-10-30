@@ -1,0 +1,16 @@
+<div class="tituloListas">
+  <h1>Excluir loja</h1>
+</div>
+<form>
+  <mat-card>
+    <mat-card-content>
+      <mat-form-field>
+        <input matInput disabled placeholder="Nome" name="nome" [(ngModel)]="loja.nome">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="excluirLoja()" color="warn">Confirmar</button>
+      <button mat-raised-button routerLink="/cadastros/lojas">Cancelar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

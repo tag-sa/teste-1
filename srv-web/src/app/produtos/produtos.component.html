@@ -1,0 +1,31 @@
+<section class="cards-produtos">
+  <input type="text" [(ngModel)]="filter" placeholder="Filtrar por nome ou descrição">
+  <button mat-button (click)="filtrarPorAtributos()">Filtrar</button>
+</section>
+
+<section class="cards-produtos">
+  <mat-card class="card-produtos" *ngFor="let produto of produtosExibidos">
+    <mat-card-header>
+      <div mat-card-avatar class="card-header-image"></div>
+      <mat-card-title>{{ produto.nome }}</mat-card-title>
+      <mat-card-subtitle>{{ produto.nome }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{ URL_SERVIDOR_UPLOAD_FOTO +  produto.foto }}" alt="Foto do produto">
+    <mat-card-content>
+      <p>
+        {{ produto.descricao }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="card-actions">
+      <h3 class="preco">{{ produto.preco | formatoReal:'BRL' }}</h3>
+      <button mat-button (click)="adicionarAoCarrinho(produto)">ADICIONAR</button>
+    </mat-card-actions>
+  </mat-card>
+</section>
+<section class="cards-produtos">
+  <div class="pagination">
+    <button mat-button (click)="onPageChange(currentPage - 1)" [disabled]="!hasPreviousPage()">Anterior</button>
+    <span>Página {{ currentPage }}</span>
+    <button mat-button (click)="onPageChange(currentPage + 1)" [disabled]="!hasNextPage()">Próxima</button>
+  </div>
+</section>

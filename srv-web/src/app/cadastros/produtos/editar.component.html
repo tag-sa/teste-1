@@ -1,0 +1,48 @@
+<div class="tituloListas">
+  <h1>Editar produto</h1>
+</div>
+<form>
+  <mat-card>
+    <mat-card-content>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Nome" name="nome" [(ngModel)]="produto.nome">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Descrição" name="descricao" [(ngModel)]="produto.descricao">
+      </mat-form-field>
+      <div>
+        <label for="imgFoto">Foto</label>
+        <img id="imgFoto" style="cursor: pointer" (click)="fileUpload.click()"
+          src="{{URL_SERVIDOR_UPLOAD_FOTO + produto.foto}}">
+        <input type="file" style="display: none;" id="fileUpload" #fileUpload class="file-upload"
+          (change)="selecionarFoto($event)">
+        <button id="btnSelecionar" (click)="fileUpload.click()" mat-raised-button color="primary">Selecionar</button>
+      </div>
+      <mat-form-field class="campo-pequeno">
+        <mat-label>Categoria</mat-label>
+        <mat-select matNativeControl id="categoria" required name="categoria" [(value)]="produto.categoria.codigo">
+          <mat-option *ngFor="let categoria of categorias" [value]="categoria.codigo">
+            {{categoria.nome}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="campo-pequeno">
+        <input matInput type="number" step="0.01" placeholder="Preço" name="preco" [(ngModel)]="produto.preco">
+      </mat-form-field>
+      <mat-form-field class="campo-pequeno">
+        <input matInput type="number" placeholder="Peso" name="peso" [(ngModel)]="produto.peso">
+      </mat-form-field>
+      <mat-form-field class="campo-pequeno">
+        <input matInput type="number" step="0.01" placeholder="Desconto" name="desconto" [(ngModel)]="produto.desconto">
+      </mat-form-field>
+      <mat-form-field class="campo-pequeno">
+        <input matInput type="number" placeholder="Disponibilidade" name="disponibilidade"
+          [(ngModel)]="produto.disponibilidade">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button class="btnMyFood" (click)="atualizarProduto()" color="primary">Salvar</button>
+      <button mat-raised-button class="btnMyFood" routerLink="/cadastros">Cancelar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
